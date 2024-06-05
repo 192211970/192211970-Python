@@ -1,0 +1,14 @@
+def RemoveElements(arr, n, k):
+    mp = {i:0 for i in range(len(arr))}
+
+    for i in range(n):
+        mp[arr[i]] += 1
+
+    for i in range(n):
+        if (mp[arr[i]] <= k):
+            print(arr[i], end = " ")
+
+arr = [1, 2, 2, 3, 2, 3, 4]
+n = len(arr)
+k = 2
+RemoveElements(arr, n, k)
